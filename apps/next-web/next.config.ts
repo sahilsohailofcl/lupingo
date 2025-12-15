@@ -8,9 +8,9 @@ const nextConfig: NextConfig = {
   // The `as any` or `as object` type assertion bypasses the TypeScript
   // error (TS2353) because `useWasm` is not officially exposed in the
   // Next.js 16.0.5 config type definition.
-  compiler: {
-    useWasm: false,
-  } as any, // Using 'any' is common for internal Next.js flags
+  // compiler: {
+  //   useWasm: false,
+  // } as any, // Using 'any' is common for internal Next.js flags
   // ----------------------------------------
   
   // Keep transpilation minimal to avoid pulling in react-native-web/tailwind on the server
