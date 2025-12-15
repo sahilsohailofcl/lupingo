@@ -2,12 +2,12 @@
   "name": "next-web",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build --webpack",
+"scripts": {
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
-  },
+},
   "dependencies": {
     "@tanstack/react-query": "^5.90.11",
     "framer-motion": "^12.23.24",
