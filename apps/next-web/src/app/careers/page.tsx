@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Clock, ArrowRight, Heart, Zap, Users } from "lucide-react";
 import { Button } from "../components/ui/button";
