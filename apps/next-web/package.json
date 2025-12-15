@@ -2,23 +2,24 @@
   "name": "next-web",
   "version": "0.1.0",
   "private": true,
-"scripts": {
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
-},
+  },
   "dependencies": {
     "@tanstack/react-query": "^5.90.11",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.555.0",
     "next": "14.2.3",
-    "react": "18.3.1", 
-    "react-dom": "18.3.1" 
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-private-methods": "^7.27.1",
     "@types/node": "^20.19.25",
-    "@types/react": "18.3.3", 
+    "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@types/webpack": "^5.28.5",
     "autoprefixer": "^10.4.20",
