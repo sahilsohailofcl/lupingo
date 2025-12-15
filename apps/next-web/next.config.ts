@@ -3,6 +3,16 @@ import type { Configuration } from "webpack";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  
+  // 🎯 FIX: Explicitly forces the use of Webpack over Turbopack.
+  // The `as any` or `as object` type assertion bypasses the TypeScript
+  // error (TS2353) because `useWasm` is not officially exposed in the
+  // Next.js 16.0.5 config type definition.
+  compiler: {
+    useWasm: false,
+  } as any, // Using 'any' is common for internal Next.js flags
+  // ----------------------------------------
+  
   // Keep transpilation minimal to avoid pulling in react-native-web/tailwind on the server
   transpilePackages: [
     "@foclupus/utils",
@@ -28,11 +38,11 @@ const nextConfig: NextConfig = {
     config.resolve.alias = {
       ...(config.resolve.alias as Record<string, string> | undefined),
       // Force single React/react-dom resolution from workspace to avoid duplicate bundles
-        // Point aliases to the package root directories so subpath imports (e.g. react/jsx-runtime)
-        // resolve correctly under pnpm/monorepo setups.
-        'react': path.dirname(require.resolve('react/package.json')),
-        'react-dom': path.dirname(require.resolve('react-dom/package.json')),
-        'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+      // Point aliases to the package root directories so subpath imports (e.g. react/jsx-runtime)
+      // resolve correctly under pnpm/monorepo setups.
+      'react': path.dirname(require.resolve('react/package.json')),
+      'react-dom': path.dirname(require.resolve('react-dom/package.json')),
+      'react/jsx-runtime': require.resolve('react/jsx-runtime'),
       // map react-native imports to a local shim that re-exports react-native-web
       // using a shim ensures resolution even when packages require('react-native') directly
       'react-native$': path.resolve(__dirname, 'react-native-shim.js'),
