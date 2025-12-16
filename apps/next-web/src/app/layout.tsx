@@ -1,7 +1,9 @@
+// apps/next-web/src/app/layout.tsx
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Providers } from './components/providers/Providers';
-import Script from 'next/script';
+import { Script } from 'next/script'; // 👈 CHANGED: Use NAMED export { Script }
 
 // Your GA Measurement ID
 const GA_MEASUREMENT_ID = 'G-VRNS11LJX1'; 
@@ -18,16 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* 1. Google Tag Manager/Analytics setup 
-        The 'next/script' component is used to correctly inject scripts into the <head> 
-        or before the <body> closing tag, optimizing loading. 
-      */}
+      {/* 1. Google Tag gtag.js script */}
       <Script 
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} 
-        strategy="afterInteractive" // Loads script after hydration 
-        // Optional: Preloads the connection for faster loading
-        // onLoad={() => console.log('Google Analytics script loaded')}
+        strategy="afterInteractive" 
       />
+      
+      {/* 2. Google Tag config script */}
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
