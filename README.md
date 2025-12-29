@@ -5,37 +5,133 @@ Foclupus is a gamified productivity and dopamine detox app inspired by Duolingo'
 
 📁 Project Structure
 
-foclupus/
-├── entities/
-│   ├── UserProfile.json
-│   ├── DetoxLesson.json
-│   ├── FocusSession.json
-│   ├── Habit.json
-│   ├── Challenge.json
-│   └── MindfulnessSession.json
-│
-├── pages/
-│   ├── Landing.js
-│   ├── Onboarding.js
-│   ├── Home.js
-│   ├── FocusMode.js
-│   ├── DetoxPath.js
-│   ├── Habits.js
-│   ├── Mindfulness.js
-│   ├── Progress.js
-│   ├── Profile.js
-│   └── Subscription.js
-│
-├── components/
-│   ├── XPCelebration.jsx
-│   ├── WolfRankBadge.jsx
-│   ├── StreakDisplay.jsx
-│   ├── HabitCard.jsx
-│   ├── ChallengeCard.jsx
-│   └── ProgressRing.jsx
-│
-├── Layout.js
-└── globals.css
+```
+Lupingo/
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+├── tailwind.config.ts
+├── apps/
+│   ├── expo-mobile/
+│   │   ├── app.json
+│   │   ├── expo-env.d.ts
+│   │   ├── package.json
+│   │   ├── tsconfig.json
+│   │   └── app/
+│   │       ├── _layout.tsx
+│   │       ├── index.tsx
+│   │       ├── detox-path/
+│   │       │   └── index.tsx
+│   │       └── focus-mode/
+│   │           └── index.tsx
+│   └── next-web/
+│       ├── babel.config.js
+│       ├── eslint.config.mjs
+│       ├── next-env.d.ts
+│       ├── next.config.js
+│       ├── package.json
+│       ├── postcss.config.js
+│       ├── react-dom-compat.js
+│       ├── react-native-shim.js
+│       ├── README.md
+│       ├── tailwind.config.js
+│       ├── tsconfig.json
+│       ├── public/
+│       └── src/
+│           ├── react-types.d.ts
+│           └── app/
+│               ├── globals.css
+│               ├── layout.tsx
+│               ├── page.tsx
+│               ├── (app)/
+│               │   ├── layout.tsx
+│               │   ├── challenges/
+│               │   │   └── page.tsx
+│               │   ├── detox-path/
+│               │   │   └── page.tsx
+│               │   ├── focus-mode/
+│               │   │   └── page.tsx
+│               │   ├── habits/
+│               │   │   └── page.tsx
+│               │   ├── home/
+│               │   │   └── page.tsx
+│               │   ├── mindfulness/
+│               │   │   └── page.tsx
+│               │   ├── onboarding/
+│               │   │   └── page.tsx
+│               │   ├── profile/
+│               │   │   └── page.tsx
+│               │   ├── progress/
+│               │   │   └── page.tsx
+│               │   └── subscription/
+│               │       └── page.tsx
+│               ├── (marketing)/
+│               │   ├── layout.tsx
+│               │   ├── about/
+│               │   │   └── page.tsx
+│               │   ├── blog/
+│               │   │   └── page.tsx
+│               │   ├── careers/
+│               │   │   └── page.tsx
+│               │   ├── contact/
+│               │   │   └── page.tsx
+│               │   └── landing/
+│               │       └── page.tsx
+│               └── components/
+│                   ├── ClientWrapper.tsx
+│                   ├── MainLayout.tsx
+│                   ├── TailwindComponentWrapper.tsx
+│                   ├── TailwindWrapper.tsx
+│                   ├── landing/
+│                   │   ├── CTASection.tsx
+│                   │   ├── DetailedFeaturesSection.tsx
+│                   │   ├── DownloadSection.tsx
+│                   │   ├── FeaturesSection.tsx
+│                   │   ├── Footer.tsx
+│                   │   ├── GamificationSection.tsx
+│                   │   ├── Header.tsx
+│                   │   ├── HeroSection.tsx
+│                   │   ├── JourneySection.tsx
+│                   │   ├── OnboardingFlowSection.tsx
+│                   │   ├── PricingSection.tsx
+│                   │   ├── ScrollToTop.tsx
+│                   │   ├── TestimonialsSection.tsx
+│                   │   └── WhySection.tsx
+│                   ├── providers/
+│                   │   ├── Providers.tsx
+│                   │   └── ...
+│                   ├── ui/
+│                   │   ├── button.tsx
+│                   │   └── ...
+│                   └── web-ui/
+└── packages/
+    ├── api-client/
+    │   ├── index.ts
+    │   └── package.json
+    ├── config/
+    └── ui/
+        ├── index.ts
+        ├── package.json
+        ├── pnpm-lock.yaml
+        └── src/
+            ├── Card.tsx
+            ├── ChallengeCard.tsx
+            ├── HabitCard.tsx
+            ├── SectionHeader.tsx
+            ├── StreakDisplay.tsx
+            ├── withTailwindProvider.tsx
+            ├── WolfButton.tsx
+            └── WolfRankBadge.tsx
+    └── utils/
+        ├── apiClient.ts
+        ├── index.ts
+        ├── package.json
+        ├── types.ts
+        └── src/
+            ├── navigation.ts
+            └── types.ts
+```
 
 🎯 Core Features
 

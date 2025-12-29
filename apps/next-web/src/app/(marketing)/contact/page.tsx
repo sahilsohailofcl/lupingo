@@ -9,6 +9,7 @@ import Header from "../../components/landing/Header";
 import Footer from "../../components/landing/Footer";
 import ScrollToTop from "../../components/landing/ScrollToTop";
 import { useState } from "react";
+import { supabase } from "@foclupus/api-client";
 
 type ContactFormData = {
   name: string;
@@ -53,19 +54,28 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Frontend-only for now
-    console.log("Contact Form Data:", formData);
-    alert("Message sent! 🐺 (Frontend only)");
+    try {
+      const { error } = await supabase.from('contacts').insert([formData]);
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+      if (error) {
+        console.error('Error submitting contact form:', error);
+        alert('Failed to send message. Please try again.');
+      } else {
+        alert('Message sent successfully! 🐺');
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
+    } catch (err) {
+      console.error('Unexpected error:', err);
+      alert('An unexpected error occurred. Please try again.');
+    }
   };
 
   return (
