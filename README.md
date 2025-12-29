@@ -66,71 +66,53 @@ Lupingo/
 │               │   │   └── page.tsx
 │               │   └── subscription/
 │               │       └── page.tsx
-│               ├── (marketing)/
-│               │   ├── layout.tsx
-│               │   ├── about/
-│               │   │   └── page.tsx
-│               │   ├── blog/
-│               │   │   └── page.tsx
-│               │   ├── careers/
-│               │   │   └── page.tsx
-│               │   ├── contact/
-│               │   │   └── page.tsx
-│               │   └── landing/
-│               │       └── page.tsx
-│               └── components/
-│                   ├── ClientWrapper.tsx
-│                   ├── MainLayout.tsx
-│                   ├── TailwindComponentWrapper.tsx
-│                   ├── TailwindWrapper.tsx
-│                   ├── landing/
-│                   │   ├── CTASection.tsx
-│                   │   ├── DetailedFeaturesSection.tsx
-│                   │   ├── DownloadSection.tsx
-│                   │   ├── FeaturesSection.tsx
-│                   │   ├── Footer.tsx
-│                   │   ├── GamificationSection.tsx
-│                   │   ├── Header.tsx
-│                   │   ├── HeroSection.tsx
-│                   │   ├── JourneySection.tsx
-│                   │   ├── OnboardingFlowSection.tsx
-│                   │   ├── PricingSection.tsx
-│                   │   ├── ScrollToTop.tsx
-│                   │   ├── TestimonialsSection.tsx
-│                   │   └── WhySection.tsx
-│                   ├── providers/
-│                   │   ├── Providers.tsx
-│                   │   └── ...
-│                   ├── ui/
-│                   │   ├── button.tsx
-│                   │   └── ...
-│                   └── web-ui/
-└── packages/
-    ├── api-client/
-    │   ├── index.ts
-    │   └── package.json
-    ├── config/
-    └── ui/
-        ├── index.ts
-        ├── package.json
-        ├── pnpm-lock.yaml
-        └── src/
-            ├── Card.tsx
-            ├── ChallengeCard.tsx
-            ├── HabitCard.tsx
-            ├── SectionHeader.tsx
-            ├── StreakDisplay.tsx
-            ├── withTailwindProvider.tsx
-            ├── WolfButton.tsx
-            └── WolfRankBadge.tsx
-    └── utils/
-        ├── apiClient.ts
-        ├── index.ts
-        ├── package.json
-        ├── types.ts
-        └── src/
-            ├── navigation.ts
-            └── types.ts
+│               └── (marketing)/
+│                   ├── layout.tsx
+│                   ├── about/
+│                   │   └── page.tsx
+│                   ├── blog/
+│                   │   └── page.tsx
+│                   ├── careers/
+│                   │   └── page.tsx
+│                   ├── contact/
+│                   │   └── page.tsx
+│                   └── landing/
+│                       └── page.tsx
+├── packages/
+│   ├── api-client/
+│   │   ├── drizzle.config.ts
+│   │   ├── index.ts
+│   │   ├── package.json
+│   │   ├── schema.ts
+│   │   ├── server.ts
+│   │   └── tsconfig.json
+│   │   └── drizzle/
+│   │       ├── 0000_sad_wendell_vaughn.sql
+│   │       └── meta/
+│   │           ├── _journal.json
+│   │           └── 0000_snapshot.json
+│   ├── config/
+│   ├── ui/
+│   │   ├── index.ts
+│   │   ├── package.json
+│   │   ├── pnpm-lock.yaml
+│   │   └── src/
+│   │       ├── Card.tsx
+│   │       ├── ChallengeCard.tsx
+│   │       ├── HabitCard.tsx
+│   │       ├── SectionHeader.tsx
+│   │       ├── StreakDisplay.tsx
+│   │       ├── withTailwindProvider.tsx
+│   │       └── WolfButton.tsx
+│   │       └── WolfRankBadge.tsx
+│   └── utils/
+│       ├── apiClient.ts
+│       ├── index.ts
+│       ├── package.json
+│       ├── types.ts
+│       └── src/
+│           ├── navigation.ts
+│           └── types.ts
 ```
 
 🎯 Core Features
