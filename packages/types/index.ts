@@ -1,4 +1,4 @@
-// packages/utils/src/types.ts
+// packages/types/src/domain/index.ts
 
 export interface UserProfile {
   id: string;
@@ -11,7 +11,7 @@ export interface UserProfile {
   longest_streak: number;
   is_premium: boolean;
   // 🔥 FIX: Added the missing property 🔥
-  screen_time_saved: string; 
+  screen_time_saved: string;
 }
 
 export interface Habit {

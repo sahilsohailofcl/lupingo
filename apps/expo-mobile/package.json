@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/runtime": "^7.20.0",
     "@foclupus/api-client": "workspace:*",
+    "@foclupus/types": "workspace:*",
     "@foclupus/ui": "workspace:*",
     "@foclupus/utils": "workspace:*",
     "@tanstack/react-query": "^5.45.0",

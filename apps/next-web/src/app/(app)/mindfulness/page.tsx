@@ -5,11 +5,6 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Flame, Wind, Heart, Sun, Play, CheckCircle2, X, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// NOTE: Assuming these components are available via the import structure
-// import { SectionHeader, Card, WolfButton } from '@foclupus/ui';
-// import { createPageUrl } from '@foclupus/utils';
-// import Link from 'next/link';
-
 // --- MOCK API Clients/Components ---
 // Placeholder for external API calls (replace with actual logic)
 const base44 = {

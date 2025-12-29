@@ -1,10 +1,10 @@
-"use client"; 
+"use client";
 
-export * from './src/WolfButton'; 
-export * from './src/WolfRankBadge';
-export * from './src/StreakDisplay';
-export * from './src/ChallengeCard';
-export * from './src/HabitCard';
-export * from './src/withTailwindProvider';
-export * from './src/Card';
-export * from './src/SectionHeader';
+export * from './src/core/WolfButton';
+export * from './src/core/WolfRankBadge';
+export * from './src/core/StreakDisplay';
+export * from './src/core/ChallengeCard';
+export * from './src/core/HabitCard';
+export * from './src/core/withTailwindProvider';
+export * from './src/core/Card';
+export * from './src/core/SectionHeader';

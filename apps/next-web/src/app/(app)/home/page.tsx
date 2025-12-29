@@ -12,7 +12,7 @@ import {
 } from '@foclupus/ui'; 
 
 import { apiClient } from '@foclupus/utils/apiClient';
-import { UserProfile, Habit, Challenge } from '@foclupus/utils/types'; 
+import { UserProfile, Habit, Challenge } from '@foclupus/types'; 
 import { createPageUrl } from '@foclupus/utils';
 
 import { useQuery, useQueryClient } from '@tanstack/react-query';

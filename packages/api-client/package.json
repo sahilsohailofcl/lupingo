@@ -12,6 +12,7 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
+    "@foclupus/types": "workspace:*",
     "@supabase/supabase-js": "^2.89.0",
     "drizzle-kit": "^0.31.8",
     "drizzle-orm": "^0.45.1",

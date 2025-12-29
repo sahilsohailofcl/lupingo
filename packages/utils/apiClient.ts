@@ -5,7 +5,7 @@
 // needs to be updated to use this client to call your new Next.js API routes.
 
 // 🔥 IMPORT: Import the necessary types from the new file 🔥
-import { UserProfile, Habit } from './src/types'; 
+import { UserProfile, Habit } from '@foclupus/types'; 
 
 // Utility to simulate network delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
